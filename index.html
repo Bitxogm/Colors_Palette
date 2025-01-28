@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ColorPicker</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="shortcut icon" href="./assets/javascript.ico" type="image/x-icon">
-</head>
-<body>
-    <h2>Paleta de colores</h2>
 
-    <div class="salida" id="salida">#ffffff</div>
-    <div class="color-div">
-      <input type="color" id="color" value="#ffffff"/>
-    </div> 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
 
-    <script src="./js/color.bundle.js"></script>
-</body>
-</html>
+    <!-- icono , selleccionamos link,favicon y cambiamos la ruta a la carpeta del icono -->
+    <link
+      rel="shortcut icon"
+      href="./assets/javascript.ico"
+      type="image/x-icon"
+      />
+      <script src="./js/src/setColor.js"></script>
+      <script src="./js/src/saveColor.js"></script>
+      <script src="./js/src/getColors.js"></script>
+
+    </head>
+    <body>
+      <h2>Paleta de colores</h2>
+      
+      <div class="salida" id="salida">#ffffff</div>
+      <div class="color-div">
+        <input type="color" id="color" name="color" value='#ffffff' title="xx"/>
+        <button onclick="saveColor(color.value)">Save color</button>
+      </div>
+        <div>
+          <h2>Colores Guardados : <span id="colors">0</span></h2>
+          <ul id="list"></ul>
+        </div>
+      <script src="./js/src/variables.js"></script>
+      <script src="./js/src/color.js"></script>
+    </body>
+    </html>
